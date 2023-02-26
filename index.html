@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./src/css/reset.css ">
+ 
+    <link rel="stylesheet" href="./src/css/estilos.css">
+    <link rel="stylesheet" href="./src/css/responsivo.css">
+    <link rel="shortcut icon" href="./src/imagens/favicon.ico" type="image/x-icon">
+    <!--Fontes do google fonts pra usar no font family no css depois (Poppins)-->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin /
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;500&display=swap"
+      rel="stylesheet"
+    />
+    <title>Meu Projeto com Dev em Dobro</title>
+  </head>
+  <body>
+    <div class="fundo-video">
+      <video class="video" autoplay loop muted>
+        <!--Source é a fonte aonde tá o video-->
+        <source src="./src/video/video-mario.mp4" type="video/mp4" />
+      </video>
+    </div>
+    <!--Colocando as classes e Ids para estilizar depois -->
+    <header class="cabecalho">
+      <a>
+        <img
+          class="logo"
+          src="./src/imagens/logo-chapeu-mario.png"
+          alt="Logo Chapéu do Mario"
+        />
+      </a>
+      <nav>
+        <ul class="menu">
+          <li><a href ="#">Home</a></li>
+          <li><a href ="#">Detalhes</a></li>
+        </ul>
+      </nav>
+    </header>
+    <main class="container">
+      <div class="informacoes">
+        <img
+          class="imagem-titulo"
+          src="./src/imagens/titulo.png"
+          alt="Imagem do título do filme"
+        />
+        <p class="descricao">
+          Mario é um encanador junto com seu irmão Luigi. Um dia, eles vão parar no reino dos cogumelos, governado pela Princesa Peach, mas ameaçado pelo rei dos Koopas, que faz de tudo para conseguir reinar em todos os lugares.
+        </p>
+        <button class="botao-trailer">Veja o Trailer</button>
+      </div>
+      <img
+        class="mario"
+        src="./src/imagens/super-mario-chars.png"
+        alt="Imagem do Mario"
+      />
+      <!--Criando o popup para aparecer o video(trailer) do filme-->
+      <div class="modal">
+        <!--Div do conteudo-->
+
+        <div class="conteudo-modal">
+          <!--X para fechar o popup usando a tag span-->
+          <span class="fechar-modal">X</span>
+          <!--usar a tag iframe para colocar o video(trailer) quando abrir a popup- com id com id,largura e altura e o src com o link do video e um title com o nome-->
+          <iframe id="video" width="560" height="315" src="https://www.youtube.com/embed/Cb4WV4aXBpk" title"Trailer Oficial" frameborder="1" allow="accelerometer; autoplay; clipboard-write; encryped-media; gyroscope; picture-inpicture" allowfullscreen></iframe>
+        </div> 
+      </div>
+    </main>
+    <!--Chamar o script JS-->
+    <script src="./src/js/index.js"></script>
+  </body>
+</html>

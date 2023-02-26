@@ -1,0 +1,77 @@
+/* criar o responsivo com o media, para isso ele precisa ficar acima do estilos.css pois o CSS funciona com efeito cascata */
+
+@media (max-width: 1220px) {
+    body {
+        background-color: #f44333;
+    }
+    .fundo-video {
+        display: none;
+    }
+
+    .container {
+        /*wrap se usa pra que se nao tem espaço na tela,jogar os espaços um abaixo do outro */
+        flex-wrap: wrap;
+        /*alinhar o mario e os itens */
+        justify-content: center;
+        /* tirar a altura que foi feita no stilos com o height calc */
+        height: auto;
+        /*separar os elementos pra não ficarem todos muito proximos */
+        gap: 30px;
+    }
+
+    /*diminuir a img do mario */
+
+    .container .mario {
+        max-width: 50%;
+    }
+    
+    /*alinhar os elementos no centro com o flex */
+    .container .informacoes {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+
+    }
+    /*mudar a cor da descriçao */
+
+    .container .descricao {
+        color: #ffffff;
+        text-align: center;
+    }
+    /*estilizando o botao na responsividade */
+    .container .botao-trailer {
+        background-color: #263238;
+    }
+}
+/*responsividade para celular */
+
+@media (max-width:500px) {
+    .cabecalho {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px;
+    }
+    .container .imagem-titulo {
+        max-width: 75%;
+
+    }
+
+    .modal .fechar-modal {
+        width: 30px;
+        line-height: 30px;
+
+    }
+    /*para telas até 300px */
+    .modal #video {
+        width: 300px;
+        height: 169px;
+    }
+}
+/*para telas menores que 300px */
+@media (max-width: 376px) {
+    .modal #video {
+        width: 250px;
+        height: 140px;
+    }
+
+}
